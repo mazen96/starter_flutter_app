@@ -6,13 +6,10 @@ class StartupView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<StartupViewModel>.reactive(
+      onModelReady: (model) => model.initialize(),
       builder: (context, model, child) => Scaffold(
         body: Center(
-          child: Text('Startup View'),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () => model.navigateToHome(),
-          child: Icon(Icons.arrow_forward),
+          child: CircularProgressIndicator(),
         ),
       ),
       viewModelBuilder: () => StartupViewModel(),

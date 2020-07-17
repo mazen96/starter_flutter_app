@@ -5,17 +5,16 @@
 // **************************************************************************
 
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:starter_app/ui/views/home/home_view.dart';
 import 'package:starter_app/ui/views/startup/startup_view.dart';
 
 class Routes {
-  static const String homeView = '/';
-  static const String startupView = '/startup-view';
+  static const String startupView = '/';
+  static const String homeView = '/home-view';
   static const all = <String>{
-    homeView,
     startupView,
+    homeView,
   };
 }
 
